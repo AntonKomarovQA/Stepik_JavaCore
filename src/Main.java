@@ -15,16 +15,8 @@ public class Main {
         double disBC = scanner.nextInt();
         double massa = scanner.nextInt();
 
-        double itog =calk(disAB, disBC, massa);
-
-
-        System.out.printf("%.2f",itog);
-
-
-        }
-
-    private static double calk(double disAB, double disBC, double massa){
         double min_rasxod_toplivo = 0;
+
 
         if (massa<= 500){
             min_rasxod_toplivo = 1;
@@ -36,28 +28,29 @@ public class Main {
             min_rasxod_toplivo = 9;
         }  else {
             System.out.println("ERROR");
-            System.exit(1);
+            return;
         }
-
 
         double fuelAB = disAB * min_rasxod_toplivo;
         double fuelBC = disBC * min_rasxod_toplivo;
 
         if (fuelAB>300){
             System.out.println("ERROR");
-            System.exit(1);
+            return;
         } else if (fuelBC>300){
             System.out.println("ERROR");
-            System.exit(1);
+            return;
         }
+
+
 
         double itog = fuelAB + fuelBC - 300;
 
-        if (itog<0){
-            System.out.println("0.00");
-            System.exit(1);
+        if (itog<0) {
+            itog = 0.;
+            System.out.printf("%.2f", itog);
         }
+        System.out.printf("%.2f", itog);
 
-        return itog;
-    }
+        }
 }
