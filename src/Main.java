@@ -34,22 +34,16 @@ public class Main {
         double fuelAB = disAB * min_rasxod_toplivo;
         double fuelBC = disBC * min_rasxod_toplivo;
 
-        if (fuelAB>300){
-            System.out.println("ERROR");
-            return;
-        } else if (fuelBC>300){
+
+
+        if (fuelAB>300 || fuelBC>300 ){
             System.out.println("ERROR");
             return;
         }
 
+        double itog = 300-fuelAB>fuelBC?0:fuelBC-(300-fuelAB) ;
 
 
-        double itog = fuelAB + fuelBC - 300;
-
-        if (itog<0) {
-            itog = 0.;
-            System.out.printf("%.2f", itog);
-        }
         System.out.printf("%.2f", itog);
 
         }
