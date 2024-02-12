@@ -1,11 +1,6 @@
 package Task2_2_4;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.text.DecimalFormat;
 import java.util.*;
-
-import static java.lang.Math.*;
 
 public class Main {
     public static void main(String[] args) {
