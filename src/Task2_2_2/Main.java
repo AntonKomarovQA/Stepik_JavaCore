@@ -5,21 +5,25 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-
         Scanner scan = new Scanner(System.in);
-        final int N = 10;
-        int mark, kol = 0;//kol - счетчик введенных оценок
-        int chetMin = 0;
+        int diapazomA = scan.nextInt();
+        int diapazomB = scan.nextInt();
 
-        while (kol < N) {
-            mark = scan.nextInt(); //вводим оценку
 
-            if (mark < 4) {
-                chetMin++;
-            }
-            kol++;
+        double itog = 1;
+
+        if (diapazomA > diapazomB) {
+            int zamena = diapazomA;
+            diapazomA = diapazomB;
+            diapazomB = zamena;
         }
-        System.out.println(chetMin);
-        //вывод с одним знаком после точки
+
+        int perStart = diapazomA;
+            while (perStart <= diapazomB) {
+                itog *= perStart;
+                perStart++;
+            }
+
+        System.out.println(itog);
     }
 }

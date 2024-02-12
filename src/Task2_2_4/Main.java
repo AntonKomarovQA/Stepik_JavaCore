@@ -10,43 +10,17 @@ import static java.lang.Math.*;
 public class Main {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
 
-         Scanner scanner = new Scanner(System.in);
+        int StartChislo = scanner.nextInt();
 
-        double disAB = scanner.nextInt();
-        double disBC = scanner.nextInt();
-        double massa = scanner.nextInt();
+        int del = 0 ;  //если деление на Остаток =0
 
-        double min_rasxod_toplivo = 0;
-
-
-        if (massa<= 500){
-            min_rasxod_toplivo = 1;
-        } else if ( massa <= 1000) {
-            min_rasxod_toplivo = 4;
-        }else if ( massa <= 1500) {
-            min_rasxod_toplivo = 7;
-        }else if ( massa <= 2000) {
-            min_rasxod_toplivo = 9;
-        }  else {
-            System.out.println("ERROR");
-            return;
+        for (int i = 1 ; i<= StartChislo; i ++){
+            if (StartChislo % i ==0 ){
+                del += i;
+            }
         }
-
-        double fuelAB = disAB * min_rasxod_toplivo;
-        double fuelBC = disBC * min_rasxod_toplivo;
-
-
-
-        if (fuelAB>300 || fuelBC>300 ){
-            System.out.println("ERROR");
-            return;
-        }
-
-        double itog = 300-fuelAB>fuelBC?0:fuelBC-(300-fuelAB) ;
-
-
-        System.out.printf("%.2f", itog);
-
-        }
+        System.out.println(del);
+    }
 }

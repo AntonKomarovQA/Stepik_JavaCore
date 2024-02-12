@@ -4,36 +4,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        int a = scanner.nextInt(); // Вводимое число
 
-         Scanner scanner = new Scanner(System.in);
+        int positiv = 0; // счетчик  положительных делителей
 
-        String day = scanner.nextLine().toLowerCase();
+        int Num; // последовательные числа
+        do{
+            Num = scanner.nextInt();
+            if (Num > 0 && a % Num == 0){
+                positiv++;
+            }
+        } while (Num>=0);
+        System.out.println(positiv);
 
-        switch(day) {
-            case "понедельник":
-                System.out.println("Monday");
-                break;
-            case "вторник":
-                System.out.println("Tuesday");
-                break;
-            case "среда":
-                System.out.println("Wednesday");
-                break;
-            case "четверг":
-                System.out.println("Thursday");
-                break;
-            case "пятница":
-                System.out.println("Friday");
-                break;
-            case "суббота":
-                System.out.println("Saturday");
-                break;
-            case "воскресенье":
-                System.out.println("Sunday");
-                break;
-            default:
-                System.out.println("ERROR");
-        }
         }
 }

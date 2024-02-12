@@ -5,24 +5,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
 
-         Scanner scanner = new Scanner(System.in);
+        int StartChislo = scanner.nextInt();
+        int min = scanner.nextInt();
 
-        String day = scanner.next();
-
-
-        switch(day) {
-            case "1", "2", "3", "4", "5":
-                System.out.println("Working day");
-                break;
-            case "6":
-                System.out.println("Saturday");
-                break;
-            case "7":
-                System.out.println("Sunday");
-                break;
-            default:
-                System.out.println("ERROR");
+        for ( int i = 1 ; i < StartChislo; i ++){
+            int curNum = scanner.nextInt();
+            if (curNum < min){
+                min = curNum;
+            }
         }
+        System.out.println(min);
         }
 }
