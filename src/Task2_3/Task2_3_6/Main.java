@@ -1,17 +1,18 @@
-package Task2_3_2;
+package Task2_3.Task2_3_6;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int width = scan.nextInt();
+        int k = scan.nextInt();
 
-        for (int i = width; i >= 0; i--) {
-            for (int j = i; j > 0; j--) {
-                System.out.print(i);
+
+        for (int i =  1; i <= k; i++) {
+            for (int j =  1; j <=  k; j++) {
+                System.out.printf("%d\t", i * j);
             }
             System.out.println();
         }
-        }
     }
+}

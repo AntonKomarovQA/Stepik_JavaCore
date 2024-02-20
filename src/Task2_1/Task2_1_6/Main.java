@@ -1,3 +1,5 @@
+package Task2_1.Task2_1_6;
+
 import org.w3c.dom.ls.LSOutput;
 
 import java.text.DecimalFormat;

@@ -1,4 +1,4 @@
-package Task2_2_1;
+package Task2_2.Task2_2_1;
 
 import org.w3c.dom.ls.LSOutput;
 
