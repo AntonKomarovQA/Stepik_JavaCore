@@ -17,7 +17,7 @@ public class Main {
         int [] mas = new int[size];
 
         for (int i =0; i < mas.length; i++) {
-            mas[i] = random.nextInt(10, 21);
+            mas[i] = random.nextInt(-3, 6);
             //System.out.print(mas[i]+ " ");
         }
         System.out.println(Arrays.toString(mas));
